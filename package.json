@@ -1,11 +1,17 @@
 {
   "name": "faeasypdf",
-  "version": "2",
+  "version": "2.0.0",
   "description": "WordPress to PDF made easy.",
   "author": "Frantic Ape",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-zip": "^4.0.0"
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-zip": "^4.2.0"
+  },
+  "dependencies": {
+    "npm": "^10.1.0"
   }
 }
