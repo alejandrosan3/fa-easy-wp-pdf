@@ -1,0 +1,6 @@
+{
+  "name": "franticape/faeasypdf",
+  "require": {
+    "mpdf/mpdf": "^8.0.3"
+  }
+}
