@@ -1,66 +1,55 @@
-const gulp = require("gulp");
-const zip = require("gulp-zip");
-const cleanCSS = require("gulp-clean-css");
-const terser = require("gulp-terser");
-const imagemin = require("gulp-imagemin");
+import gulp from "gulp";
+const { src, series, dest } = gulp;
+import zip from "gulp-zip";
+import cleanCSS from "gulp-clean-css";
+import terser from "gulp-terser";
+import { deleteAsync as del } from "del";
 
 // Define paths
 const paths = {
   css: "assets/css/**/*.css",
   js: "assets/js/**/*.js",
-  images: "assets/images/**/*",
-  php: "**/*.php",
-  languages: "languages/**/*",
-  templates: "templates/**/*",
+  fonts: "vendor/mpdf/mpdf/ttfonts/**/*",
 };
 
 // Minify CSS
-function minifyCss() {
-  return gulp.src(paths.css).pipe(cleanCSS()).pipe(gulp.dest("assets/css"));
+async function minifyCSS() {
+  return src(paths.css).pipe(cleanCSS()).pipe(dest("assets/css"));
 }
 
 // Minify JS
-function minifyJs() {
-  return gulp.src(paths.js).pipe(terser()).pipe(gulp.dest("assets/js"));
+async function minifyJS() {
+  return src(paths.js).pipe(terser()).pipe(dest("assets/js"));
 }
 
-// Optimize Images
-function optimizeImages() {
-  return gulp
-    .src(paths.images)
-    .pipe(imagemin())
-    .pipe(gulp.dest("assets/images"));
+// Remove unused fonts from MPDF
+async function cleanFonts() {
+  return del([
+    paths.fonts,
+    "!vendor/mpdf/mpdf/ttfonts/*DejaVu*",
+    "!vendor/mpdf/mpdf/ttfonts/*FontAwesome*",
+  ]);
 }
 
 // Package Plugin
-function packagePlugin() {
-  return gulp
-    .src(
-      [
-        paths.php,
-        paths.css,
-        paths.js,
-        paths.images,
-        paths.languages,
-        paths.templates,
-      ],
-      { base: "." }
-    )
-    .pipe(zip("fa-easy-wp-pdf.zip"))
-    .pipe(gulp.dest("."));
+// Package Plugin
+async function zipFiles() {
+  return src(
+    [
+      "**/*",
+      "!gulpfile.js",
+      "!package.json",
+      "!package-lock.json",
+      "!node_modules/**",
+      "!composer.json",
+      "!composer.lock",
+      "!README.md",
+    ],
+    { base: "." }
+  )
+    .pipe(zip("fa-easypdf.zip"))
+    .pipe(dest("."));
 }
 
 // Define default task
-const defaultTask = gulp.series(
-  minifyCss,
-  minifyJs,
-  optimizeImages,
-  packagePlugin
-);
-
-// Export tasks
-exports.minifyCss = minifyCss;
-exports.minifyJs = minifyJs;
-exports.optimizeImages = optimizeImages;
-exports.packagePlugin = packagePlugin;
-exports.default = defaultTask;
+export default series(minifyCSS, minifyJS, cleanFonts, zipFiles);

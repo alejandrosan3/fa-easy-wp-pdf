@@ -48,12 +48,17 @@ class FAEASYPDF_Settings {
 		$page = add_menu_page( 'Easy WP To PDF', 'Easy WP To PDF', 'manage_options', 'faeasypdf' . '_settings',  array( $this, 'settings_page' ) );
 
 		// Addons submenu
-		add_submenu_page( 'faeasypdf' . '_settings', 'Addons', 'Addons', 'manage_options', 'faeasypdf-addons', array( $this, 'faeasypdf_addons_screen' ));
+		//add_submenu_page( 'faeasypdf' . '_settings', 'Addons', 'Addons', 'manage_options', 'faeasypdf-addons', array( $this, 'faeasypdf_addons_screen' ));
+
+		add_submenu_page( 'faeasypdf' . '_settings', 'Import/Export', 'Import/Export', 'manage_options', 'faeasypdf_importexport', array( $this, 'faeasypdf_importexport_screen' ));
 
 		// settings assets
 		add_action( 'admin_print_styles-' . $page, array( $this, 'settings_assets' ) );
 
 	}
+
+
+	public function faeasypdf_importexport_screen(){}
 
 	/*
 	public function faeasypdf_addons_screen() { ?>
