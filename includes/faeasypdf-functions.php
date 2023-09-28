@@ -61,7 +61,7 @@ function faeasypdf_display_pdf_button( $content ) {
 
         $pdfbutton_position = sanitize_option( 'faeasypdf_pdfbutton_position', get_option( 'faeasypdf_pdfbutton_position', 'before' ) );
 
-        $template = new FAEASYPDF_Template_Loader;
+        $template = new faeasypdf_Template_Loader;
 
         if( $pdfbutton_position ) {
 

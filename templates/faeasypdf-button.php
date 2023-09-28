@@ -1,7 +1,7 @@
 <?php 
 /**
 * faeasypdf-button.php
-* This template is used to display DK PDF Button
+* This template is used to display FA Easy PDF Button
 *
 * Do not edit this template directly, 
 * copy this template and paste in your theme inside a directory named faeasypdf 

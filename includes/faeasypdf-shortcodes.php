@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
 * [faeasypdf-button]
-* This shortcode is used to display DK PDF Button
+* This shortcode is used to display FA Easy WP to PDF Button
 * doesn't has attributes, uses settings from DK PDF Settings / PDF Button
 */
 function faeasypdf_button_shortcode( $atts, $content = null ) {

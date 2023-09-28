@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 * adds dashboard page 
 */
 function faeasypdf_welcome_screen_page(){
-    add_dashboard_page('DK PDF Welcome', 'DK PDF Welcome', 'manage_options', 'faeasypdf-welcome', 'faeasypdf_welcome_page');
+    add_dashboard_page('Easy WP to PDF Welcome', 'Easy WP to PDF Welcome', 'manage_options', 'faeasypdf-welcome', 'faeasypdf_welcome_page');
 }
 
 // output faeasypdf-welcome dashboard page 
@@ -14,11 +14,11 @@ function faeasypdf_welcome_page(){ ?>
 
     <div class="wrap">
 
-      <h1>Welcome to DK PDF <?php echo FAEASYPDF_VERSION;?></h1>
+      <h1>Welcome to Easy WP to PDF <?php echo FAEASYPDF_VERSION;?></h1>
       <h2 style="font-size:140%;">What's new in this version:</h2>
       <ul>
         <li>
-          <h3 style="margin-top:20px;">DK PDF admin menu</h3>
+          <h3 style="margin-top:20px;">FA Easy WP to PDF admin menu</h3>
           <?php 
             $img1 = plugins_url( 'assets/images/faeasypdf-admin-menu.jpg', faeasypdf_PLUGIN_FILE );
           ?>
@@ -33,7 +33,7 @@ function faeasypdf_welcome_page(){ ?>
         </li>
         <li>
           <h3 style="margin-top:20px;">[faeasypdf-remove] shortcode for removing pieces of content in the generated PDF</h3></li>
-          <p><a href="http://wp.dinamiko.com/demos/faeasypdf/doc/faeasypdf-remove-shortcode/" target="_blank">See more info here</a></p>
+          <p><a href="https://franticape.com/demos/faeasypdf/doc/faeasypdf-remove-shortcode/" target="_blank">See more info here</a></p>
       </ul>
 
     </div>

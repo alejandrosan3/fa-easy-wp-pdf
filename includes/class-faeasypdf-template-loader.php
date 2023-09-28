@@ -1,8 +1,8 @@
 <?php
 
-if ( ! class_exists( 'FAEASYPDF_Template_Loader' ) )  {
+if ( ! class_exists( 'faeasypdf_Template_Loader' ) )  {
 
-	class FAEASYPDF_Template_Loader {
+	class faeasypdf_Template_Loader {
 
 		protected $filter_prefix = 'faeasypdf';
 		protected $theme_template_directory = 'faeasypdf';

@@ -10,7 +10,7 @@ function faeasypdf_get_custom_fields_settings() {
 	$fields = array();
 
 	$fields['_hide_pdfbutton'] = array(
-		'name' => __( 'Disable DK PDF Button:' , 'faeasypdf' ),
+		'name' => __( 'Disable FA Easy WP to PDF Button:' , 'faeasypdf' ),
 		'description' => '',
 		'type' => 'checkbox',
 		'default' => '',
