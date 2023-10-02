@@ -1,10 +1,10 @@
-=== DK PDF ===
-Contributors: dinamiko
+=== Frantic Ape's Easy WP to PDF ===
+Contributors: Frantic Ape
 Tags: wp to pdf, wordpress to pdf, acrobat, pdf, post to pdf, generate pdf, mpdf, generate, convert, create, convert pdf, create pdf
-Requires at least: 3.9.6
-Tested up to: 4.9
-Requires PHP: 5.6
-Stable tag: 1.9.6
+Requires at least: 5.0.0
+Tested up to: 6.3.2
+Requires PHP: 7.4
+Stable tag: 2.0.0
 
 WordPress to PDF made easy.
 
@@ -17,21 +17,17 @@ DK PDF allows site visitors convert posts and pages to PDF using a button.
 = Features =
 
 * Add PDF button in posts (including custom post types) and pages.
-* Configure PDF header and footer, add custom logo, custom CSS and more.
+* Configure PDF header, body and footer, add custom logo and custom CSS.
 * Copy plugin templates in your theme for PDF customizations.
-* Multiple shortcodes: [faeasypdf-button], [faeasypdf-pagebreak], [faeasypdf-remove], and more..
 * Add custom fonts to the PDF.
 
-= Addons =
-* Do you need to create a PDF with a selection of your articles?
-<a href="https://codecanyon.net/item/fa-easypdf-generator/13530581" target="_blank">DK PDF Generator</a> is the perfect tool for you.
 
 = Github =
-* <a href="https://github.com/Dinamiko/fa-easypdf" target="_blank">https://github.com/Dinamiko/fa-easypdf</a>
+* <a href="https://github.com/alejandrosan3/fa-easy-wp-pdf" target="_blank">https://github.com/alejandrosan3/fa-easy-wp-pdf</a>
 
 == Installation ==
 
-Installing "DK PDF" can be done either by searching for "DK PDF" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
+Installing "FA Easy WP to PDF" can be done either by searching for "Easy WP to PDF" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
 
 1. Download the plugin via WordPress.org
 2. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard
@@ -50,6 +46,9 @@ Installing "DK PDF" can be done either by searching for "DK PDF" via the "Plugin
 
 Thanks to:
 
+Dinamiko, the original author of this plugin. the person that brought this really awesome plugin to life.
+https://github.com/Dinamiko
+
 mPDF, PHP class which generates PDF files from UTF-8 encoded HTML
 https://mpdf.github.io/
 
@@ -57,6 +56,18 @@ Font Awesome, the iconic font and CSS toolkit
 http://fortawesome.github.io/Font-Awesome/
 
 == Changelog ==
+
+= 2.0.0 =
+* **Major Update**: Transitioned the plugin's Author From Dinamiko to Frantic Ape's.
+* **Major Update**: Changed Repo Logo and metadata.
+* **Improvement**: PHP 8.X compatibility.
+* **Improvement**: Optimized the plugin structure for faster performance.
+* **Improvement**: Started the transition to fully standard WordPress code.
+* **Update**: Updated all dependencies to their latest versions as of September 2023.
+* **Fix**: Addressed various minor bugs and issues reported by users in the past.
+* **Documentation**: Updated README to provide clearer instructions for both installation and development processes.
+
+---------------------------------
 
 = 1.9.6 =
 * Update mPDF library to latest version.

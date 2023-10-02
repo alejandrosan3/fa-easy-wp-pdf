@@ -45,7 +45,7 @@ class FAEASYPDF_Settings {
 	public function add_menu_item () {
 
 		// main menu
-		$page = add_menu_page( 'Easy WP To PDF', 'Settings', 'manage_options', 'faeasypdf' . '_settings',  array( $this, 'settings_page' ) );
+		$page = add_menu_page( 'Easy WP To PDF', 'Easy WP To PDF', 'manage_options', 'faeasypdf' . '_settings',  array( $this, 'settings_page' ) );
 
 		// Addons submenu
 		//add_submenu_page( 'faeasypdf' . '_settings', 'Addons', 'Addons', 'manage_options', 'faeasypdf-addons', array( $this, 'faeasypdf_addons_screen' ));
